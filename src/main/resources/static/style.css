@@ -1,0 +1,17 @@
+body {
+    background-color: sandybrown;
+}
+
+h1,h2,h3,h4,h5,table,td,tr {
+    align-items: center;
+    text-align: center;
+    align-self: center;
+}
+
+h2 {
+    color: darkred;
+}
+
+table {
+    border: solid;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Links</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/style.css"/>
+</head>
+<body>
+<h1> Add new short link </h1>
+<table>
+    <tr>
+        <td>
+            <form action="links/create" method="post">
+                <h3> add link</h3><br>
+                <label for="outlink"></label>
+                <input type="text" id="outlink" name="outLink">
+                <label for="create-button"></label>
+                <input type="submit" id="create-button">
+            </form>
+        </td>
+    </tr>
+</table>
+<h1> present links </h1>
+<table th:object="${links}" id="linktable">
+    <tr th:each="link :${links}">
+        <td th:text="${link.id}"></td>
+        <td th:ref="${link.outLink}" th:text="${link.outLink}"></td>
+        <td ><a th:href="${domain} + ${link.link}" th:text="'Short link'"></a></td>
+    </tr>
+</table>
+</body>
+</html>

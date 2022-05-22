@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/style.css" />
+</head>
+<body>
+<h1>Registration</h1>
+
+<form method="post" action="#">
+    <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email">
+    <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+    <input type="submit">
+    <span th:text='${errormsg}'></span>
+</form>
+
+</body>
+</html>
